@@ -6,8 +6,8 @@ public class bai4 {
 
 	public static void main(String[] args) {
 		// Code đầu vào
-		double x;
-		int n, tong =0;
+		double x, kq;
+		int n;
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.println("Vui lòng nhập vào số x:");
@@ -16,13 +16,19 @@ public class bai4 {
 		n = scan.nextInt();
 		
 		// Code xử lý
-		for(int i = 1; i <= n; i++) {
-			tong += Math.pow(x, i);
-		}
+		kq = tinhTong(x, n);
 		
 		// Code dầu ra
-		System.out.println("Sn = " + tong);
+		System.out.println("Sn = " + kq);
 
+	}
+	
+	public static double tinhTong(double x, double n) {
+		double tong = 0;
+		for(int i = 1; i <= n; i++) {
+			tong += Math.pow(x, i);
+		}return tong;
+		
 	}
 
 }
